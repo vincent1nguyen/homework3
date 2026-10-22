@@ -1,0 +1,121 @@
+:root {
+  --color-background: #241A15;
+  --color-gold: #C5A46D;
+  --color-text: #F1E7D6;
+  --color-nav: #34291F;
+  --font-main: Georgia, 'Times New Roman', serif;
+  --spacing: 1rem;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.5;
+}
+
+nav {
+  background-color: var(--color-nav);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 1rem;
+  margin-right: 2rem;
+  padding: 0;
+}
+
+nav h1 {
+  font-size: 1.75rem;
+  margin-left: 2rem;
+  white-space: nowrap;
+}
+
+/* Descendant: targets all links inside nav */
+nav a {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Attribute: targets links ending in .html */
+a[href$=".html"] {
+    color: var(--color-text);
+}
+
+/* Child: targets direct list items inside nav ul */
+nav ul > li {
+    padding: 0.3em;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--color-gold);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-gold);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Consistent spacing */
+section {
+    margin-bottom: calc(var(--spacing) * 3);
+}
+
+h1, h2, h3 {
+    margin-bottom: var(--spacing);
+}
+
+p {
+    margin-bottom: var(--spacing);
+}
+
+/* Buttons */
+button {
+    font-size: 1rem;
+    padding: 0.75em 1.5em;
+    background-color: var(--color-gold);
+    color: var(--color-background);
+    border: none;
+}
+
+a:hover {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+/* Focus styling for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 0.15em solid var(--color-gold);
+    outline-offset: 0.25em;
+}
+
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav h1 {
+    margin-left: 0;
+    white-space: normal;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

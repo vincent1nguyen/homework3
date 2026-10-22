@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiments</title>
+  </head>
+  <body>
+    <main>
+      <h2>My Projects</h2>
+
+      <template id="project-template">
+        <article>
+          <h3>Project Name</h3>
+          <p>Project Description</p>
+        </article>
+      </template>
+
+      <h3>Music I Enjoy</h3>
+
+      <audio controls>
+        <source src="audio/adrenaline.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>My Photography</h3>
+
+      <p>Here's a short video of some moments I've captured!</p>
+
+      <video width="500" controls>
+        <source src="video/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Cloud Computing</h3>
+
+      <canvas id="cloudCanvas" width="300" height="150">
+        Your browser does not support the canvas element.
+      </canvas>
+
+      <script>
+        const canvas = document.getElementById("cloudCanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.font = "60px Arial";
+        ctx.fillText("☁️", 100, 90);
+      </script>
+    </main>
+  </body>
+</html>
