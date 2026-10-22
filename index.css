@@ -40,6 +40,10 @@ nav h1 {
 nav a {
     text-decoration: none;
     white-space: nowrap;
+}
+
+/* Attribute selector: styles navigation links with an href */
+nav a[href] {
     color: var(--color-text);
 }
 
