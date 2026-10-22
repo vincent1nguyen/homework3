@@ -40,10 +40,6 @@ nav h1 {
 nav a {
     text-decoration: none;
     white-space: nowrap;
-}
-
-/* Attribute: targets links ending in .html */
-a[href$=".html"] {
     color: var(--color-text);
 }
 
